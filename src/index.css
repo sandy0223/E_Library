@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Bungee_Spice{
+    font-family: "Bungee Spice";
+}
+
+.Bungee_Inline{
+    font-family: "Bungee Inline";
+}
