@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
   };
 
   return (
@@ -13,17 +24,49 @@ const Header = () => {
           <div className="flex-shrink-0">
             <h1 className="text-2xl text-white font-bold Bungee_Inline">E-Library</h1>
           </div>
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             <Link to="/" className="hover:text-gray-300">Home</Link>
-            <Link to="/categories" className="hover:text-gray-300">Categories</Link>
+            <div
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                className="hover:text-gray-300 focus:outline-none"
+              >
+                Categories
+              </button>
+              {dropdownOpen && (
+                <div className="absolute top-4 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                  <Link
+                    to="/e-journals"
+                    className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                  >
+                    Journals
+                  </Link>
+                  <Link
+                    to="/magazines"
+                    className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                  >
+                    Magazines
+                  </Link>
+                  <Link
+                    to="/novels"
+                    className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                  >
+                    Novels
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/my-library" className="hover:text-gray-300">My Library</Link>
-            <Link to="/e-journals" className="hover:text-gray-300">E-Journals</Link>
-            <Link to="/magazines" className="hover:text-gray-300">Magazines</Link>
             <Link to="/about" className="hover:text-gray-300">About Us</Link>
             <Link to="/contact" className="hover:text-gray-300">Contact Us</Link>
           </div>
           <div className="Redirects bg-white rounded-xl">
-            <button className='p-2 border-2 shadow-lg   rounded-xl border-black hover:bg-blue-600 hover:text-white'><Link to="/login">Login</Link></button>
+            <button className='p-2 border-2 shadow-lg rounded-xl border-black hover:bg-blue-600 hover:text-white'>
+              <Link to="/login">Login</Link>
+            </button>
           </div>
           <div className="md:hidden">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
@@ -43,10 +86,40 @@ const Header = () => {
         <div className="md:hidden bg-blue-700">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500">Home</Link>
-            <Link to="/categories" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500">Categories</Link>
+            <div className="relative">
+              <button 
+                onClick={handleMouseEnter} 
+                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500 focus:outline-none"
+              >
+                Categories
+              </button>
+              {dropdownOpen && (
+                <div 
+                  onMouseLeave={handleMouseLeave} 
+                  className="pl-6 mt-2 space-y-1"
+                >
+                  <Link 
+                    to="/e-journals" 
+                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500"
+                  >
+                    Journals
+                  </Link>
+                  <Link 
+                    to="/magazines" 
+                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500"
+                  >
+                    Magazines
+                  </Link>
+                  <Link 
+                    to="/novels" 
+                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500"
+                  >
+                    Novels
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link to="/my-library" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500">My Library</Link>
-            <Link to="/e-journals" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500">E-Journals</Link>
-            <Link to="/magazines" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500">Magazines</Link>
             <Link to="/about" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500">About Us</Link>
             <Link to="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-blue-500">Contact Us</Link>
           </div>
