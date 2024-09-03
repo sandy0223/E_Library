@@ -11,6 +11,7 @@ import Login from '../Pages/Login';
 import NotFound from '../Pages/NotFound';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Novel from '../Pages/Novel'
 
 const AppRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const AppRoutes = () => {
         <Route path="/magazines" element={<Magazines />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/novel" element={<Novel/>} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound />} /> {/* Catch-all route for undefined paths */}
       </Routes>
