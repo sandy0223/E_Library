@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../Pages/Home';
 import Categories from '../Pages/Categories';
-import MyLibrary from '../Pages/Contact';
+import MyLibrary from '../Pages/MyLibrary';
 import EJournals from '../Pages/EJournals';
 import Magazines from '../Pages/Magazines';
 import About from '../Pages/About';
@@ -12,6 +12,7 @@ import NotFound from '../Pages/NotFound';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Novel from '../Pages/Novel'
+import SignUp from '../Pages/SignUp';
 
 const AppRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const AppRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/novel" element={<Novel/>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} /> {/* Catch-all route for undefined paths */}
       </Routes>
       <Footer/>

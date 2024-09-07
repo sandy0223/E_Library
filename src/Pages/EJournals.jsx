@@ -150,9 +150,9 @@ const EJournals = () => {
         ))}
       </div>
       {selectedJournal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg max-w-lg w-full">
-            <h3 className="text-2xl text-black font-bold mb-4">{selectedJournal.title}</h3>
+        <div className="fixed inset-0 bg-white bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded-lg max-w-lg h-[75%] w-full">
+            <h3 className="text-2xl text-black bg-white font-bold mb-4">{selectedJournal.title}</h3>
             <img src={selectedJournal.image} alt="book image" />
             <p className='text-black'>{selectedJournal.description}</p>
             <div className="mt-4">
@@ -163,9 +163,9 @@ const EJournals = () => {
                 Start Reading
               </a>
             </div>
-            <div className="flex justify-between items-center mt-4">
-              <p className="text-lg font-bold">{selectedJournal.price}</p>
-              <p className="text-lg font-bold">{selectedJournal.rentalPrice}</p>
+            <div className="flex justify-between  items-center mt-4">
+              {/* <p className="text-lg font-bold">{selectedJournal.price}</p>
+              <p className="text-lg font-bold">{selectedJournal.rentalPrice}</p> */}
             </div>
             <button
               onClick={() => setSelectedJournal(null)}

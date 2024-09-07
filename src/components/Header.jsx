@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-to-t from-purple-400 to-blue-300 shadow-lg font-mono">
+    <header className="bg-gradient-to-t from-purple-400 to-blue-300 shadow-lg font-mono fixed top-0 left-0 w-screen z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
