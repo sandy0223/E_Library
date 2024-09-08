@@ -2,6 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SignUp = () => {
+
+  
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+  
+    async function submit(e) {
+      e.preventDefault();
+  
+      try {
+  
+        await axios.post("https://localhost:3000/Signup", { username, password })
+  
+      } catch (e) {
+  
+        console.log(error);
+  
+      }
+    }
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center bg-gray-100">
           <h1 className="text-3xl font-bold text-center text-gray-800 mb-6 mt-2">Sign Up</h1>
