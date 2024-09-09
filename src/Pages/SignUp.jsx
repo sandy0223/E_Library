@@ -1,28 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const SignUp = () => {
 
-  
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-  
-    async function submit(e) {
-      e.preventDefault();
-  
-      try {
-  
-        await axios.post("https://localhost:3000/Signup", { username, password })
-  
-      } catch (e) {
-  
-        console.log(error);
-  
-      }
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  async function submit(e) {
+    e.preventDefault();
+
+    try {
+
+      await axios.post("https://localhost:3000/Signup", { username, password })
+
+    } catch (e) {
+
+      console.log(error);
+
     }
+  }
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center bg-gray-100">
-          <h1 className="text-3xl font-bold text-center text-gray-800 mb-6 mt-2">Sign Up</h1>
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6 mt-2">Sign Up</h1>
       <main className="w-full max-w-md bg-white shadow-lg rounded-lg p-8 sm:max-w-lg md:max-w-xl lg:flex lg:items-center lg:p-12 lg:bg-blue-400 relative overflow-hidden">
         <div className="w-full lg:w-1/2 lg:relative z-20">
           <form className="space-y-6">
@@ -33,9 +34,12 @@ const SignUp = () => {
               </label>
               <input
                 type="text"
-                id="fullName"
-                placeholder="Enter your full name"
+                id="username"
+                placeholder="Enter your name"
                 required
+                onChange={(e) => {
+                  setUsername = (e.target.value)
+                }}
                 className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
               />
             </div>
@@ -50,6 +54,9 @@ const SignUp = () => {
                 id="email"
                 placeholder="Enter your email"
                 required
+                onChange={(e) => {
+                  setEmail = (e.target.value)
+                }}
                 className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
               />
             </div>
@@ -64,6 +71,9 @@ const SignUp = () => {
                 id="password"
                 placeholder="Create a password"
                 required
+                onChange={(e) => {
+                  setPassword = (e.target.value)
+                }}
                 className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
               />
             </div>
@@ -85,6 +95,7 @@ const SignUp = () => {
             {/* Sign Up Button */}
             <button
               type="submit"
+              onClick={submit}
               className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             >
               Sign Up
