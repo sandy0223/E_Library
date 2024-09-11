@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BookSection from '../components/BookSection';
 const Home = () => {
     return (
         <div>
@@ -29,15 +30,13 @@ const Home = () => {
                 </div>
             </div>
 
-
-            {/* section1 */}
-            <div className="Cards bg-blue-400 gap-4 p-8 flex flex-wrap justify-around">
-                <div className="card w-[30%] h-60 bg-gray-100">
-                    <img src="https://example.com/image1.jpg" alt="Card 1" />
-                    <div className="card-content">
-                        <h2>Card 1 Title</h2>
-                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
+            <BookSection />
+            {/* {/* section1
+                <h1 className='p-2 text-center bg-blue-400 text-white font-bold text-3xl Bungee_Inline pt-2'>You May Like !</h1> */}
+            {/* <div className="Cards bg-blue-400 gap-4 p-8 flex flex-wrap justify-around">
+                <div className="card w-[30%] h-20 flex flex-row bg-gray-100">
+                   <div className="circle w-[35%] h-[70%] rounded-full bg-red-200 m-4 "></div>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum delectus ut in earum, eveniet quis eligendi magni deserunt molestiae magnam.</p>
                 </div>
                 <div className="card w-[30%] h-60 bg-gray-100">
                     <img src="https://example.com/image2.jpg" alt="Card 2" />
@@ -101,7 +100,7 @@ const Home = () => {
                     </div>
 
                 </div>
-            </div>
+            </div>  */}
         </div>
     );
 };
