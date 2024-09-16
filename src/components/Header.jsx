@@ -22,7 +22,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl text-white font-bold Bungee_Inline">E-Library</h1>
+            <h1 className="text-2xl text-white font-bold Bungee_Inline">LEARNTEL <i class="ri-book-open-fill"></i></h1>
           </div>
           <div className="hidden md:flex space-x-8 items-center">
             <Link to="/" className="hover:text-gray-300">Home</Link>

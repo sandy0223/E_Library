@@ -28,7 +28,7 @@ const BookSection = () => {
   return (
     <div className="container mx-auto py-2">
       <h1 className="text-4xl font-bold text-center  mb-2 bg-blue-400 p-2 Bungee_Inline rounded-full">You May Like</h1>
-      <span className='font-mono text-lg bg-gradient-to-r from-yellow-300 to-red-300 p-2 rounded-full font-bold'>Latest collections of Self help Books</span>
+      <span className='font-mono text-lg bg-gradient-to-r from-yellow-300 to-red-300 p-2 rounded-full font-bold'>Latest collections of Self help Books <i class="ri-book-open-fill"></i></span>
       
       <div className="flex mt-2 flex-wrap -mx-4">
         {books.map((book, index) => (
