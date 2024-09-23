@@ -23,7 +23,6 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
             <img className='w-[85px] absolute top-2 left-10' src="/images/ELogo.png" alt="logo" /><span className='absolute top-8 text-2xl font-bold font-sans   left-[8%] text-white '>LEARNTEL</span>
-            {/* <h1 className="text-2xl text-white font-bold Bungee_Inline">LEARNTEL <i class="ri-book-open-fill"></i></h1> */}
           </div>
           <div className="hidden md:flex space-x-8 items-center">
             <Link to="/" className="text-white hover:text-gray-300">Home</Link>
@@ -65,9 +64,9 @@ const Header = () => {
             <Link to="/contact" className="hover:text-gray-300 text-white">Contact Us</Link>
           </div>
           <div className="Redirects bg-white rounded-xl">
-            <button className='p-2 border-2 shadow-lg rounded-xl border-black hover:bg-blue-600 hover:text-white'>
-              <Link to="/login">Login</Link>
-            </button>
+            
+              <Link to="/login"><button className='p-2 border-2 shadow-lg rounded-xl border-black hover:bg-blue-600 hover:text-white'>Login </button></Link>
+           
           </div>
           <div className="md:hidden">
             <button onClick={toggleMenu} className="text-white focus:outline-none">
