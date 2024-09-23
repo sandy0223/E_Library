@@ -6,27 +6,23 @@ const SignUp = () => {
 
 
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  async function submit(e) {
-    e.preventDefault();
-
-    try {
-
-      await axios.post("https://localhost:3000/Signup", { username, password })
-
-    } catch (e) {
-
-      console.log(error);
-
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    axios.post("", { username, email, password })
+      .then(result => console.log(result))
+      .catch(err => console.log(err))
   }
+
+
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center bg-gray-100">
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-6 mt-2">Sign Up</h1>
       <main className="w-full max-w-md bg-white shadow-lg rounded-lg p-8 sm:max-w-lg md:max-w-xl lg:flex lg:items-center lg:p-12 lg:bg-blue-400 relative overflow-hidden">
         <div className="w-full lg:w-1/2 lg:relative z-20">
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             {/* Full Name */}
             <div className="form-group">
               <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
@@ -37,6 +33,7 @@ const SignUp = () => {
                 id="username"
                 placeholder="Enter your name"
                 required
+                name='username'
                 onChange={(e) => {
                   setUsername = (e.target.value)
                 }}
@@ -54,6 +51,7 @@ const SignUp = () => {
                 id="email"
                 placeholder="Enter your email"
                 required
+                name='email'
                 onChange={(e) => {
                   setEmail = (e.target.value)
                 }}
@@ -95,7 +93,6 @@ const SignUp = () => {
             {/* Sign Up Button */}
             <button
               type="submit"
-              onClick={submit}
               className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             >
               Sign Up

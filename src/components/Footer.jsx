@@ -11,19 +11,25 @@ const Footer = () => {
             <img className='w-[40%] ' src="/images/image 24.svg" alt="boy" />
           <div className="images">
           </div>
-          <div className="flex flex-col mr-8 rounded-2xl w-[15%] items-center justify-center">
-          <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%] border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/">Home</Link>
+          {/* <div className="flex flex-col mr-8 rounded-2xl w-[15%] items-center justify-center"> */}
+          {/* <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%] border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/">Home</Link>
             <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%]  border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/Login">Login</Link>
             <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%]  border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/Contact">Contact Us</Link>
-            <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%] border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/About">About Us</Link></div>
+            <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%] border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/About">About Us</Link></div> */}
 
           <div className="text-white ">
-            <ul className='flex flex-row w-8 gap-8 text-2xl'>
-              <li><a href="#"><i class="ri-facebook-circle-line"></i></a></li>
-              <li><a href="#"><i class="ri-whatsapp-line"></i></a></li>
-              <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-              <li><a href="#"><i class="ri-linkedin-line"></i></a></li>
+            <ul className='flex flex-col w-8 gap-8 text-5xl'>
+              <li><a title='Facebook' href="#"><i class="ri-facebook-circle-line"></i></a></li>
+              <li><a title='Whatsapp' href="#"><i class="ri-whatsapp-line"></i></a></li>
+              <li><a title='Instagram' href="#"><i class="ri-instagram-line"></i></a></li>
+              <li><a title='Linkedin' href="#"><i class="ri-linkedin-line"></i></a></li>
             </ul>
+          </div>
+          <div className="text-white flex flex-col w-[20%] justify-center gap-y-8 items-end">
+          <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%]  border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/">FAQ</Link>
+          <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%]  border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/Login">Login</Link>
+            <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%]  border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/Contact">Contact Us</Link>
+            <Link className='text-black font-bold hover:text-white hover:bg-slate-300 w-[60%] border-2 border-slate-400 bg-slate-50 text-center p-2 mb-2 rounded-full' to="/About">About Us</Link>
           </div>
         </div>
         <div className="text-9xl text-white mb-4 mt-4 Orbitron shadow-inner shadow-white  p-4"><span className='text-yellow-300'>LEARN</span>TEL</div>

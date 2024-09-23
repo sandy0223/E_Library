@@ -18,21 +18,22 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-to-t from-purple-400 to-blue-300 shadow-lg font-mono fixed top-0 left-0 w-screen z-30">
+    <header className="bg-gradient-to-t from-purple-700 to-slate-900 shadow-lg font-mono fixed top-0 left-0 w-screen z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl text-white font-bold Bungee_Inline">LEARNTEL <i class="ri-book-open-fill"></i></h1>
+            <img className='w-[85px] absolute top-2 left-10' src="/images/ELogo.png" alt="logo" /><span className='absolute top-8 text-2xl font-bold font-sans   left-[8%] text-white '>LEARNTEL</span>
+            {/* <h1 className="text-2xl text-white font-bold Bungee_Inline">LEARNTEL <i class="ri-book-open-fill"></i></h1> */}
           </div>
           <div className="hidden md:flex space-x-8 items-center">
-            <Link to="/" className="hover:text-gray-300">Home</Link>
+            <Link to="/" className="text-white hover:text-gray-300">Home</Link>
             <div
               className="relative"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className="hover:text-gray-300 focus:outline-none"
+                className="hover:text-gray-300 text-white focus:outline-none"
               >
                 Categories
               </button>
@@ -59,9 +60,9 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link to="/my-library" className="hover:text-gray-300">My Library</Link>
-            <Link to="/about" className="hover:text-gray-300">About Us</Link>
-            <Link to="/contact" className="hover:text-gray-300">Contact Us</Link>
+            <Link to="/my-library" className="hover:text-gray-300 text-white">My Library</Link>
+            <Link to="/about" className="hover:text-gray-300 text-white">About Us</Link>
+            <Link to="/contact" className="hover:text-gray-300 text-white">Contact Us</Link>
           </div>
           <div className="Redirects bg-white rounded-xl">
             <button className='p-2 border-2 shadow-lg rounded-xl border-black hover:bg-blue-600 hover:text-white'>

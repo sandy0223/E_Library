@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Login = () => {
-  let [username, setUsername] = useState('');
-  let [password, setPassword] = useState('');
-  let [email, setEmail] = useState('');
+  // let [username, setUsername] = useState('');
+  // let [password, setPassword] = useState('');
+  // let [email, setEmail] = useState('');
 
   async function submit(e) {
     e.preventDefault();
@@ -37,6 +37,7 @@ const Login = () => {
                 id="username"
                 placeholder="Enter username"
                 required
+                name='username'
                 onChange={(e) => {
                   setUsername = (e.target.value)
                 }}
@@ -50,6 +51,7 @@ const Login = () => {
               <input
                 type="text"
                 id="email"
+                name='email'
                 placeholder="Enter email"
                 required
                 onChange={(e) => {
@@ -67,6 +69,7 @@ const Login = () => {
                 id="password"
                 placeholder="Enter password"
                 required
+                name='password'
                 onChange={(e) => {
                   setPassword = (e.target.value)
                 }}
