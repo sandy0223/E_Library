@@ -1,0 +1,6 @@
+ /node_modules
+ /Backend/node_modules
+ *.lock
+ *.bin
+ *.cmd
+ *.ps1
